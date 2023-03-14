@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Daftar">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="263dp"
+            android:layout_height="303dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gambar3" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/FirstNameC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:hint="Nama Panggilan"
+            app:counterMaxLength="10"
+            app:layout_constraintStart_toStartOf="@+id/EmailC"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:startIconDrawable="@drawable/ic_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/FirstName"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/LastNameC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Nama Lengkap"
+            app:counterMaxLength="10"
+            app:layout_constraintEnd_toEndOf="@+id/FirstNameC"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/FirstNameC"
+            app:layout_constraintTop_toBottomOf="@+id/FirstNameC"
+            app:startIconDrawable="@drawable/ic_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/LastName"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/EmailC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Email"
+            app:counterMaxLength="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LastNameC"
+            app:startIconDrawable="@android:drawable/sym_action_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Email"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/PasswordC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:counterMaxLength="10"
+            app:endIconMode="password_toggle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/EmailC"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/EmailC"
+            app:layout_constraintTop_toBottomOf="@+id/EmailC"
+            app:layout_constraintVertical_bias="0.07"
+            app:startIconDrawable="@drawable/ic_kunci">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Password"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/RePasswordC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:hint="Re-Password"
+            app:counterMaxLength="10"
+            app:endIconMode="password_toggle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/PasswordC"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/PasswordC"
+            app:layout_constraintTop_toBottomOf="@+id/PasswordC"
+            app:layout_constraintVertical_bias="0.102"
+            app:startIconDrawable="@drawable/ic_kunci">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/RePassword"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/Daftar"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/radius_birugenbi"
+            android:padding="15dp"
+            android:text="Daftar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/RePasswordC"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/RePasswordC"
+            app:layout_constraintTop_toBottomOf="@+id/RePasswordC" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

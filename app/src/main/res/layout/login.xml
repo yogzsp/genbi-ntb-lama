@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Login">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="296dp"
+            android:layout_height="340dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gambar1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/EmailC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            app:counterMaxLength="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.083"
+            app:startIconDrawable="@android:drawable/sym_action_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Email"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/PasswordC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:counterMaxLength="10"
+            app:endIconMode="password_toggle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/EmailC"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/EmailC"
+            app:layout_constraintTop_toBottomOf="@+id/EmailC"
+            app:layout_constraintVertical_bias="0.07"
+            app:startIconDrawable="@drawable/ic_kunci">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Password"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/masuk"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/radius_birugenbi"
+            android:padding="15dp"
+            android:text="Masuk"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/PasswordC"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="@+id/PasswordC"
+            app:layout_constraintTop_toBottomOf="@+id/PasswordC" />
+
+
+        <TextView
+            android:id="@+id/ForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="lupa password?"
+            android:onClick="LupaPassword"
+            android:textColor="@color/biruGenbi"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/masuk"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/NewUser"
+            app:layout_constraintTop_toBottomOf="@+id/masuk"
+            app:layout_constraintVertical_bias="0.045" />
+
+        <TextView
+            android:id="@+id/NewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:text="Pengguna baru? Daftar Sekarang"
+            android:textColor="@color/biruGenbi"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/masuk"
+            app:layout_constraintTop_toBottomOf="@+id/masuk"
+            app:layout_constraintVertical_bias="0.053" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GenBI NTB</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <style name="prefix" parent="Base.TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <string name="Agama">Masukan Agamamu</string>
+</resources>

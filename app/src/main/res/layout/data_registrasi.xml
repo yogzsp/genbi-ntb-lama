@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataRegistrasi">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Kembali">
+
+            <ImageView
+                android:id="@+id/TombolKembali"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/TombolKembali2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kembali"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/KelompokRegistrasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/TitleRegistrasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="REGISTRASI FORM"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.124"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/TextRegistrasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masukan data-data berikut sebagai syarat pendaftaran"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.055"
+                app:layout_constraintStart_toStartOf="@+id/TitleRegistrasi"
+                app:layout_constraintTop_toBottomOf="@+id/TitleRegistrasi" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CNamaLengkap"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Nama Lengkap"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/TextRegistrasi"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/TextRegistrasi"
+                app:layout_constraintTop_toBottomOf="@+id/TextRegistrasi"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NamaLengkap"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CNim"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="NIM"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/CNamaLengkap"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/CNamaLengkap"
+                app:layout_constraintTop_toBottomOf="@+id/CNamaLengkap"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Nim"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CProdi"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Prodi"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/CNamaLengkap"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/CNim"
+                app:layout_constraintTop_toTopOf="@+id/CNim"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Prodi"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CSemester"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Semester"
+                app:layout_constraintStart_toStartOf="@+id/CNim"
+                app:layout_constraintTop_toBottomOf="@+id/CNim">
+
+                <AutoCompleteTextView
+                    android:id="@+id/Semester"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:inputType="none"
+                    android:padding="5dp"
+                    android:text="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CUniversitas"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:hint="Universitas"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/CNamaLengkap"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/CSemester"
+                app:layout_constraintTop_toTopOf="@+id/CSemester"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Universitas"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CAlamat"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Alamat Rumah"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/CSemester"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/CSemester"
+                app:layout_constraintTop_toBottomOf="@+id/CSemester"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CAgama"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Agama"
+                app:layout_constraintStart_toStartOf="@+id/CAlamat"
+                app:layout_constraintTop_toBottomOf="@+id/CAlamat">
+
+                <AutoCompleteTextView
+                    android:id="@+id/pilihAgama"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:inputType="none"
+                    android:padding="5dp"
+                    android:text="Islam" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CJumlahSaudara"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah Saudara"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/CAlamat"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/CAgama"
+                app:layout_constraintTop_toTopOf="@+id/CAgama"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/JumlahSaudara"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CNamaAyah"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nama Ayah"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/CAgama"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/CAgama"
+                app:layout_constraintTop_toBottomOf="@+id/CAgama"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NamaAyah"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CNamaIbu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Nama Ibu"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/CNamaAyah"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/CNamaAyah"
+                app:layout_constraintTop_toBottomOf="@+id/CNamaAyah"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NamaIbu"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CPekerjaanIbu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Pekerjaan Ibu"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/CPekerjaanAyah"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/CNamaIbu"
+                app:layout_constraintTop_toTopOf="@+id/CNamaIbu"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/PekerjaanIbu"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CPekerjaanAyah"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Pekerjaan Ayah"
+                app:counterMaxLength="10"
+                app:layout_constraintEnd_toEndOf="@+id/CJumlahSaudara"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/CNamaAyah"
+                app:layout_constraintTop_toTopOf="@+id/CNamaAyah"
+                app:prefixTextColor="@color/abu">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/PekerjaanAyah"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:padding="2dp"
+                    android:textColor="@color/abu"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textRegistrasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Upload data-data berikut sesuai format yang di tentukan!"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/CNamaIbu"
+                app:layout_constraintTop_toBottomOf="@+id/CNamaIbu" />
+
+            <TextView
+                android:id="@+id/LabelFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Masukan Foto Diri"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/textRegistrasi"
+                app:layout_constraintTop_toBottomOf="@+id/textRegistrasi" />
+
+            <TextView
+                android:id="@+id/InputFoto"
+                android:layout_width="wrap_content"
+                android:minWidth="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:background="@drawable/radius_birugenbi"
+                android:onClick="UploadFotoDiri"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:text="Belum Dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/LabelFoto"
+                app:layout_constraintTop_toTopOf="@+id/LabelFoto" />
+
+            <TextView
+                android:id="@+id/inputKtp"
+                android:layout_width="wrap_content"
+                android:minWidth="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius_birugenbi"
+                android:onClick="UploadFotoKTP"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:text="Belum Dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/InputFoto"
+                app:layout_constraintTop_toBottomOf="@+id/InputFoto" />
+
+            <TextView
+                android:id="@+id/LabelKTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masukan Foto KTP"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/LabelFoto"
+                app:layout_constraintTop_toBottomOf="@+id/LabelFoto" />
+
+            <TextView
+                android:id="@+id/inputKK"
+                android:layout_width="wrap_content"
+                android:minWidth="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius_birugenbi"
+                android:onClick="UploadFotoKK"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:text="Belum Dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/inputKtp"
+                app:layout_constraintTop_toBottomOf="@+id/inputKtp" />
+
+            <TextView
+                android:id="@+id/LabelKK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masukan Foto KK"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/LabelKTP"
+                app:layout_constraintTop_toBottomOf="@+id/LabelKTP" />
+
+            <TextView
+                android:id="@+id/inputTNilai"
+                android:layout_width="wrap_content"
+                android:minWidth="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius_birugenbi"
+                android:onClick="UploadPDFTNilai"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:text="Belum Dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/inputKK"
+                app:layout_constraintTop_toBottomOf="@+id/inputKK" />
+
+            <TextView
+                android:id="@+id/LabelTNilai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masukan PDF Transkip Nilai"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/LabelKK"
+                app:layout_constraintTop_toBottomOf="@+id/LabelKK" />
+
+            <TextView
+                android:id="@+id/inputKHS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius_birugenbi"
+                android:onClick="UploadPDFKHS"
+                android:minWidth="110dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:text="Belum Dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/inputTNilai"
+                app:layout_constraintTop_toBottomOf="@+id/inputTNilai" />
+
+            <TextView
+                android:id="@+id/LabelKhs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masukan PDF KHS"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/LabelTNilai"
+                app:layout_constraintTop_toBottomOf="@+id/LabelTNilai" />
+
+            <TextView
+                android:id="@+id/inputSBeasiswa"
+                android:layout_width="wrap_content"
+                android:minWidth="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius_birugenbi"
+                android:onClick="UploadSBeasiswa"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:text="Belum Dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/inputKHS"
+                app:layout_constraintTop_toBottomOf="@+id/inputKHS" />
+
+            <TextView
+                android:id="@+id/LabelSBeasiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masukan PDF Suket Beasiswa"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/LabelKhs"
+                app:layout_constraintTop_toBottomOf="@+id/LabelKhs" />
+
+            <TextView
+                android:id="@+id/inputSGaji"
+                android:layout_width="wrap_content"
+                android:minWidth="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius_birugenbi"
+                android:onClick="UploadFotoSlipGaji"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:text="Belum Dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/inputSBeasiswa"
+                app:layout_constraintTop_toBottomOf="@+id/inputSBeasiswa" />
+
+            <TextView
+                android:id="@+id/LabelSGaji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masukan Foto Slip Gaji Ortu"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/LabelSBeasiswa"
+                app:layout_constraintTop_toBottomOf="@+id/LabelSBeasiswa" />
+
+            <TextView
+                android:id="@+id/inputSertifikat"
+                android:layout_width="wrap_content"
+                android:minWidth="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius_birugenbi"
+                android:onClick="UploadPDFSertifikat"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:text="Belum Dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/inputSGaji"
+                app:layout_constraintTop_toBottomOf="@+id/inputSGaji" />
+
+            <TextView
+                android:id="@+id/LabelSertifikat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masukan PDF Sertifikat"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/LabelSGaji"
+                app:layout_constraintTop_toBottomOf="@+id/LabelSGaji" />
+
+            <TextView
+                android:id="@+id/inputMLatter"
+                android:layout_width="wrap_content"
+                android:minWidth="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius_birugenbi"
+                android:onClick="UploadPDFMotivationLatter"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:text="Belum Dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/inputSertifikat"
+                app:layout_constraintTop_toBottomOf="@+id/inputSertifikat" />
+
+            <TextView
+                android:id="@+id/LabelMLatter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masukan PDF Motivation Latter"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/LabelSertifikat"
+                app:layout_constraintTop_toBottomOf="@+id/LabelSertifikat" />
+
+            <TextView
+                android:id="@+id/TombolSimpan"
+                android:layout_width="310dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/radius_birugenbi"
+                android:paddingLeft="10dp"
+                android:paddingTop="7dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="6dp"
+                android:text="Simpan Data"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/CNamaLengkap"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/CNamaLengkap"
+                app:layout_constraintTop_toBottomOf="@+id/LabelMLatter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

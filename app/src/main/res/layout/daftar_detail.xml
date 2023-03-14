@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DaftarDetail">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AlamatC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:hint="Alamat rumah"
+            app:counterMaxLength="10"
+            app:layout_constraintEnd_toEndOf="@+id/CJurusan"
+            app:layout_constraintStart_toStartOf="@+id/CJurusan"
+            app:layout_constraintTop_toBottomOf="@+id/CJurusan"
+            app:prefixTextColor="@color/abu"
+            app:startIconDrawable="@android:drawable/ic_dialog_map">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Alamat"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/Konfirmasi"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/radius_birugenbi"
+            android:padding="15dp"
+            android:text="Konfirmasi"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/TLahirC"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/TLahirC" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/NoHPC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="No HP"
+            app:counterMaxLength="10"
+            app:expandedHintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:prefixText="+62"
+            app:prefixTextAppearance="@style/prefix"
+            app:prefixTextColor="@color/abu"
+            app:startIconDrawable="@drawable/ic_telepon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/NoHP"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="phone"
+                android:padding="2dp"
+                android:text=""
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CUniversitas"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Universitas"
+            app:layout_constraintEnd_toEndOf="@+id/NoHPC"
+            app:layout_constraintStart_toStartOf="@+id/NoHPC"
+            app:layout_constraintTop_toBottomOf="@+id/NoHPC">
+
+            <AutoCompleteTextView
+                android:id="@+id/pilihUniversitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:padding="5dp"
+                android:text="Universitas Bumigora" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CJurusan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Jurusan"
+            app:counterMaxLength="10"
+            app:layout_constraintEnd_toEndOf="@+id/CUniversitas"
+            app:layout_constraintStart_toStartOf="@+id/CUniversitas"
+            app:layout_constraintTop_toBottomOf="@+id/CUniversitas"
+            app:prefixTextColor="@color/abu"
+            app:startIconDrawable="@drawable/ic_kelas">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Jurusan"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TeLahirC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Tempat Lahir"
+            app:counterMaxLength="10"
+            app:layout_constraintStart_toStartOf="@+id/AlamatC"
+            app:layout_constraintTop_toBottomOf="@+id/AlamatC"
+            app:prefixTextColor="@color/abu"
+            app:startIconDrawable="@android:drawable/ic_dialog_map">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TempatLahir"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TLahirC"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:hint="Tanggal Lahir"
+            app:counterMaxLength="10"
+            app:layout_constraintEnd_toEndOf="@+id/AlamatC"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AlamatC"
+            app:prefixTextColor="@color/abu"
+            app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TanggalLahir"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:ems="10"
+                android:inputType="date"
+                android:onClick="setTanggal"
+                android:focusable="false"
+                android:padding="2dp"
+                android:textColor="@color/abu"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/TeLahirC"
+            app:layout_constraintTop_toBottomOf="@+id/TeLahirC">
+
+            <RadioButton
+                android:id="@+id/Pria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Pria" />
+
+            <RadioButton
+                android:id="@+id/Wanita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wanita" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Data Informasi"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="Isilah data-data berikut sesuai data diri anda. Data ini akan diserahkan ke admin untuk mendatai biodata anda!"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
